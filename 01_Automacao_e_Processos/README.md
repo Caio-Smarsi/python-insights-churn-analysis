@@ -1,0 +1,39 @@
+# Automação de Cadastro de Produtos (RPA)
+
+Este projeto consiste em uma automação robótica de processos (RPA) desenvolvida para realizar o cadastro em massa de produtos em uma plataforma web. O objetivo é substituir a alimentação manual de dados por um fluxo automatizado, mitigando erros de digitação e otimizando o tempo de operação.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **Python**: Linguagem principal para desenvolvimento da lógica.
+* **PyAutoGUI**: Controle automatizado de periféricos (mouse e teclado).
+* **Pandas**: Manipulação e leitura da base de dados em formato `.csv`.
+* **Time**: Gerenciamento de intervalos e sincronização com o carregamento do sistema.
+
+---
+
+## ⚙️ Fluxo de Execução
+
+O algoritmo foi estruturado nos seguintes passos técnicos:
+
+1. **Inicialização**: Abertura do navegador e acesso ao sistema corporativo.
+2. **Autenticação**: Preenchimento automatizado de credenciais de login.
+3. **Leitura de Dados**: Importação da base de dados `produtos.csv` via Pandas.
+4. **Processamento em Lote**: Iteração sobre as linhas da tabela para preenchimento dos campos:
+   * Código, Marca, Tipo, Categoria, Preço Unitário e Custo.
+5. **Tratamento de Dados**: Validação de campos opcionais para evitar o preenchimento de valores nulos (`NaN`).
+
+---
+
+## 📍 Ferramenta de Mapeamento de Coordenadas
+
+Para o correto funcionamento dos cliques, foi utilizado um script auxiliar para o rastreio das coordenadas $(X, Y)$ da interface.
+
+```python
+import time
+import pyautogui
+
+# Pausa para posicionamento manual do cursor
+time.sleep(4)
+print(pyautogui.position())
