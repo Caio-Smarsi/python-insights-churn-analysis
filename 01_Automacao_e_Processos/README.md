@@ -24,23 +24,10 @@ O algoritmo foi estruturado nos seguintes passos técnicos:
    * Código, Marca, Tipo, Categoria, Preço Unitário e Custo.
 5. **Tratamento de Dados**: Validação de campos opcionais para evitar o preenchimento de valores nulos (`NaN`).
 
----
-
-## 📍 Ferramenta de Mapeamento de Coordenadas
-
-Para o correto funcionamento dos cliques, foi utilizado um script auxiliar para o rastreio das coordenadas $(X, Y)$ da interface.
-
-```python
-import time
-import pyautogui
-
-# Pausa para posicionamento manual do cursor
-time.sleep(4)
-print(pyautogui.position())
-
 ## 🎥 Demonstração da Execução (RPA)
 
 No vídeo abaixo, é possível observar o script em operação real: realizando o login, processando a base de dados `produtos.csv` e automatizando o preenchimento de cada campo no sistema corporativo sem intervenção humana.
-https://github.com/user-attachments/assets/cac08357-e428-4022-b2b4-e9c27abc1d2a
+
+https://github.com/user-attachments/assets/fa00a236-3dc0-44eb-ab79-7503d5f40232
 
 
